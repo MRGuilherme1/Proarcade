@@ -6,40 +6,51 @@
 
 html,
 body {
-    background-color: black;
+    background-image: url(imagens/5931481.jpg);
+    background-size: cover;
 }
 
 body {
     min-height: 100vh;
     padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 10;
     transition: background-color 1000ms;
 }
 
-body:has(.card[data-color="blue"]:hover) {
-    background-color: rgb(var(--blue-rgb) / 25%);
-}
-
-body:has(.card[data-color="blue"]:hover) {
-    background-color: rgb(var(--blue-rgb) / 25%);
-}
-
-body:has(.card[data-color="green"]:hover) {
-    background-color: rgb(var(--green-rgb) / 25%);
-}
-
-
-body:has(.card[data-color="brown"]:hover) {
-    background-color: rgb(var(--brown-rgb) / 25%);
-}
-
-#cards {
+#coluna_game1{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.233);
+}
+
+#coluna_game2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.233);
+}
+
+#game {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+p{
+    font-size: 15px;
+    text-align: center;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 30px;
+    color: aliceblue;
+    font-family: sans-serif;
 }
 
 .card {
@@ -49,6 +60,7 @@ body:has(.card[data-color="brown"]:hover) {
     cursor: pointer;
     outline: none;
     transition: scale 100ms;
+    margin-top: 10px;
 }
 
 .card .card-front-image {
@@ -57,7 +69,7 @@ body:has(.card[data-color="brown"]:hover) {
 }
 
 .card .card-image {
-    width: clamp(300px, 20vw, 500px);
+    width: clamp(200px, 20vw, 200px);
     aspect-ratio: 2 / 3;
     border-radius: clamp(0.5rem, 0.75vw, 2rem);
 }

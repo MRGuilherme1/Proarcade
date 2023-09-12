@@ -342,7 +342,7 @@ function drawPlatforms() {
 
         // Desenhe uma área perfeita apenas se o herói ainda não tiver alcançado a plataforma
         if (sticks.last().x < x) {
-            ctx.fillStyle = "deeppink";
+            ctx.fillStyle = "DeepSkyBlue";
             ctx.fillRect(
                 x + w / 2 - perfectAreaSize / 2,
                 canvasHeight - platformHeight,
@@ -355,7 +355,7 @@ function drawPlatforms() {
 
 function drawHero() {
     ctx.save();
-    ctx.fillStyle = "deeppink";
+    ctx.fillStyle = "black";
     ctx.translate(
         heroX - heroWidth / 2,
         heroY + canvasHeight - platformHeight - heroHeight / 2
@@ -381,12 +381,12 @@ function drawHero() {
 
     // olho
     ctx.beginPath();
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.arc(5, -7, 3, 0, Math.PI * 2, false);
     ctx.fill();
 
     // Bandana
-    ctx.fillStyle = "aqua";
+    ctx.fillStyle = "DeepSkyBlue";
     ctx.fillRect(-heroWidth / 2 - 1, -12, heroWidth + 2, 4.5);
     ctx.beginPath();
     ctx.moveTo(-9, -14.5);
@@ -439,17 +439,15 @@ function drawSticks() {
 function drawBackground() {
     // céu
     var gradient = ctx.createLinearGradient(0, 0, 0, window.innerHeight);
-    gradient.addColorStop(0, "#BBD691");
-    gradient.addColorStop(1, "#FEF1E1");
+    gradient.addColorStop(0, "#4682B4");
+    gradient.addColorStop(1, "#B0C4DE");
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
     // colinas
-    drawHill(hill1BaseHeight, hill1Amplitude, hill1Stretch, "#95C629");
-    drawHill(hill2BaseHeight, hill2Amplitude, hill2Stretch, "#659F1C");
+    drawHill(hill1BaseHeight, hill1Amplitude, hill1Stretch, "#4169E1");
+    drawHill(hill2BaseHeight, hill2Amplitude, hill2Stretch, "#1E90FF");
 
-    // árvores
-    trees.forEach((tree) => drawTree(tree.x, tree.color));
 }
 
 // Uma colina é uma forma sob uma onda sinusal esticada
@@ -477,14 +475,6 @@ function drawTree(x, color) {
     const treeCrownHeight = 25;
     const treeCrownWidth = 10;
 
-    // porta-malas
-    ctx.fillStyle = "#7D833C";
-    ctx.fillRect(
-        -treeTrunkWidth / 2,
-        -treeTrunkHeight,
-        treeTrunkWidth,
-        treeTrunkHeight
-    );
 
     // coroa
     ctx.beginPath();
