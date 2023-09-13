@@ -1,0 +1,78 @@
+        <div id="coluna_game2">
+            <div id="game">
+                <div class="card" data-color="blue">
+                    <a href="game1/index.html"><img class="card-front-image card-image" src="imagens/StickHero.jpg" />
+                    </a>
+                    <div class="card-faders">
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                    </div>
+                </div>
+                <h1>Stick-Hero</h1>
+                <p>Estique o bastão para alcançar e andar nas plataformas. Cuidado! Se a vara não for longa o
+                    suficiente, você vai cair! Quão longe você pode ir?</p>
+            </div>
+            <div id="game">
+                <div class="card" data-color="blue">
+                    <a href="game1/index.html"><img class="card-front-image card-image" src="imagens/StickHero.jpg" />
+                    </a>
+                    <div class="card-faders">
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                    </div>
+                </div>
+                <h1>Stick-Hero</h1>
+                <p>Estique o bastão para alcançar e andar nas plataformas. Cuidado! Se a vara não for longa o
+                    suficiente, você vai cair! Quão longe você pode ir?</p>
+            </div>
+            <div id="game">
+                <div class="card" data-color="blue">
+                    <a href="game1/index.html"><img class="card-front-image card-image" src="imagens/StickHero.jpg" />
+                    </a>
+                    <div class="card-faders">
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                    </div>
+                </div>
+                <h1>Stick-Hero</h1>
+                <p>Estique o bastão para alcançar e andar nas plataformas. Cuidado! Se a vara não for longa o
+                    suficiente, você vai cair! Quão longe você pode ir?</p>
+            </div>
+            <div id="game">
+                <div class="card" data-color="blue">
+                    <a href="game1/index.html"><img class="card-front-image card-image" src="imagens/StickHero.jpg" />
+                    </a>
+                    <div class="card-faders">
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                        <img class="card-fader card-image" src="imagens/StickHero.jpg" />
+                    </div>
+                </div>
+                <h1>Stick-Hero</h1>
+                <p>Estique o bastão para alcançar e andar nas plataformas. Cuidado! Se a vara não for longa o
+                    suficiente, você vai cair! Quão longe você pode ir?</p>
+            </div>
+        </div>

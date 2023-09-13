@@ -1,15 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-image: url(imagens/fundo2.jpg);
     background-size: 100% 800px;
     background-repeat: no-repeat;
+    font-family: Verdana;
 }
 
-header{
+header {
     position: relative;
     width: 100%;
     height: 80px;
@@ -17,73 +18,131 @@ header{
     flex-direction: row;
 }
 
-.nav{
-    padding: 20px 40px;
+.nav {
+    padding: 20px 30px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color: #000;
     background-color: #ffffff;
-    transition: .5s;
-    font-family: Verdana;
+    transition: 0.5s;
+    letter-spacing: 4px;
 }
 
-.nav:hover{
-    background-color: #00ccff;
-    color: #000;
-    transition: .5s;
-    border-bottom: 3px solid #f702ff;
+.nav:hover {
+    background: #ffffff;
+    color: #ea00ff;
+    box-shadow: 0 0 5px #ea00ff,
+        0 0 25px #ea00ff,
+        0 0 50px #ea00ff,
+        0 0 200px #ea00ff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #00000000);
 }
 
-nav{
+nav {
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     margin-left: 300px;
 }
-.logo{
+
+#botao {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border: 2px solid #000;
+
+}
+
+#botao:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 5px #000,
+        0 0 25px #000,
+        0 0 50px #000,
+        0 0 200px #000;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.logo {
     width: 150px;
     height: 150px;
     margin-left: 100px;
 }
 
-main{
+main {
     position: relative;
     width: 100%;
     height: auto;
     margin-top: 100px;
 }
 
-h2,h4{
-    font-family: Verdana;
+h2,
+h4 {
     margin-left: 200px;
-    color:#fff;
+    color: #fff;
 }
 
-h2{
+h2 {
     font-size: 80px;
     text-shadow: 4px 4px #00000065;
 }
 
-h4{
+h4 {
     font-size: 20px;
     margin-bottom: 400px;
     font-weight: normal;
     text-shadow: 2px 2px #00000065;
 }
 
-#coluna_game1{
+#slogan{
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    height: 700px;
+    text-align: start;
 }
 
-#coluna_game2{
+#coluna_game1 {
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: -150px;
+}
+
+#texto {
+    position: absolute;
+    font-size: 30px;
+    left: 10px;
+    top: 280px;
+    z-index: 3;
+    color: #fff;
+}
+
+.texto {
+    position: absolute;
+    font-size: 15px;
+    left: 10px;
+    top: 320px;
+    z-index: 3;
+    color: #fff;
+}
+
+#m_jogos {
+    position: absolute;
+    font-size: 25px;
+    left: 10px;
+    text-align: center;
+    top: 150px;
+    z-index: 3;
+    color: #fff;
 }
 
 #game {
@@ -94,14 +153,14 @@ h4{
     margin: auto;
 }
 
-p{
+p {
     font-size: 15px;
     text-align: center;
     color: #3c3d3d;
     font-family: sans-serif;
 }
 
-h1{
+h1 {
     font-size: 30px;
     color: #3c3d3d;
     font-family: sans-serif;
@@ -123,7 +182,7 @@ h1{
 }
 
 .card .card-image {
-    width: clamp(200px, 20vw, 200px);
+    width: clamp(250px, 20vw, 200px);
     aspect-ratio: 2 / 3;
     border-radius: clamp(0.5rem, 0.75vw, 2rem);
 }
@@ -173,23 +232,94 @@ h1{
 .card-fader:is(:nth-child(7), :nth-child(8)) {
     animation-delay: 2250ms;
 }
+#sobre {
+    width: 100%;
+    height: 700px;
+    text-align: center;
+}
 
-#noticias{
+#sobre_h1 {
+    margin-top: 200px;
+    font-size: 50px;
+}
+
+#sobre_p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#botao {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    background: #000;
+
+}
+
+#botao:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 5px #000,
+        0 0 25px #000,
+        0 0 50px #000,
+        0 0 200px #000;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+#sobre_img{
+    position: relative;
+    margin-top: 50px;
+    width: 700px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+#canos{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url(imagens/PACMAN.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#jogo_h1{
+    position: absolute;
+    font-size: 50px;
+    margin-top: 200px;
+}
+
+#coluna_game2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+}
+
+
+#noticias {
     position: relative;
     width: 100%;
     height: 800px;
-
     margin-top: 100px;
 }
 
-#not{
+#not {
     text-align: center;
     font-size: 60px;
     color: #000;
     text-shadow: 2px 2px #00000027;
 }
 
-#n1{
+#n1 {
     position: relative;
     width: 650px;
     height: 400px;
@@ -197,7 +327,24 @@ h1{
     float: left;
     margin: 10px;
 }
-#n2{
+
+#n1:hover {
+    transform: scale(1.03)
+}
+
+#n2:hover {
+    transform: scale(1.03)
+}
+
+#n3:hover {
+    transform: scale(1.03)
+}
+
+#n4:hover {
+    transform: scale(1.03)
+}
+
+#n2 {
     position: relative;
     width: 690px;
     height: 300px;
@@ -205,7 +352,8 @@ h1{
     float: right;
     margin: 10px;
 }
-#n3{
+
+#n3 {
     position: relative;
     width: 690px;
     height: 350px;
@@ -213,7 +361,8 @@ h1{
     float: right;
     margin: 10px;
 }
-#n4{
+
+#n4 {
     position: relative;
     width: 650px;
     height: 250px;
