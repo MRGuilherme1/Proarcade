@@ -4,8 +4,8 @@
 }
 
 body {
-    background-image: url(imagens/fundo2.jpg);
-    background-size: 100% 800px;
+    background-image: url(imagens/back02.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: Verdana;
 }
@@ -13,7 +13,10 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 80px;
+    height: 800px;
+    background-image: url(imagens/back01.jpg);
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
 }
@@ -26,9 +29,9 @@ nav {
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     margin-left: 300px;
+    margin-top: 10px;
 }
 
 .button-49,
@@ -138,13 +141,6 @@ nav {
     margin-left: 100px;
 }
 
-main {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 100px;
-}
-
 h2,
 h4 {
     margin-left: 200px;
@@ -164,16 +160,27 @@ h4 {
 }
 
 #slogan {
+    position: absolute;
     width: 100%;
-    height: 700px;
+    height: 200px;
     text-align: start;
+    z-index: 5;
+    top: 200px;
 }
 
+main {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
 #coluna_game1 {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin-top: -150px;
+    margin-top: -200px;
 }
 
 #texto {
@@ -204,6 +211,184 @@ h4 {
     color: #fff;
 }
 
+
+
+#sobre {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+#sobre_h1 {
+    margin-top: 200px;
+    font-size: 50px;
+    color: #fff;
+}
+
+#sobre_p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#botao {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #fcfcfc;
+    background-color: #ffffff17;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+
+}
+
+#botao:hover {
+    background: #fff;
+    color: #000000;
+    box-shadow: 0 0 5px #fff,
+        0 0 25px #fff,
+        0 0 50px #fff,
+        0 0 200px #fff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.333));
+}
+
+#botao:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+#botao:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+#botao span {
+    position: absolute;
+    display: block;
+}
+
+#botao span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+#botao span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+#botao span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+
+#botao span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+#sobre_img {
+    position: relative;
+    margin-top: 50px;
+    width: 700px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+#pac {
+    position: relative;
+    width: 100%;
+    height: 520px;
+}
+
+#jogo_h1 {
+    position: absolute;
+    font-size: 50px;
+    left: 500px;
+    top: 400px;
+    color: #fff;
+}
+
+#coluna_game2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#coluna_game3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
 #game {
     width: 20%;
     display: flex;
@@ -215,13 +400,13 @@ h4 {
 p {
     font-size: 15px;
     text-align: center;
-    color: #3c3d3d;
+    color: #ffffff;
     font-family: sans-serif;
 }
 
 h1 {
     font-size: 30px;
-    color: #3c3d3d;
+    color: #ffffff;
     font-family: sans-serif;
 }
 
@@ -292,175 +477,6 @@ h1 {
     animation-delay: 2250ms;
 }
 
-#sobre {
-    width: 100%;
-    height: 700px;
-    text-align: center;
-}
-
-#sobre_h1 {
-    margin-top: 200px;
-    font-size: 50px;
-}
-
-#sobre_p {
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-#botao {
-    position: relative;
-    display: inline-block;
-    padding: 25px 30px;
-    margin: 40px 0;
-    color: #fff;
-    background-color: #00000083;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    margin-right: 50px;
-
-}
-
-#botao:hover {
-    background: #ffffff;
-    color: #050801;
-    box-shadow: 0 0 5px #ffffff,
-        0 0 25px #fff,
-        0 0 50px #fff,
-        0 0 200px #fff;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.333));
-}
-
-#botao:nth-child(1) {
-    filter: hue-rotate(270deg);
-}
-
-#botao:nth-child(2) {
-    filter: hue-rotate(110deg);
-}
-
-#botao span {
-    position: absolute;
-    display: block;
-}
-
-#botao span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #000000);
-    animation: animate1 1s linear infinite;
-}
-
-@keyframes animate1 {
-    0% {
-        left: -100%;
-    }
-
-    50%,
-    100% {
-        left: 100%;
-    }
-}
-
-#botao span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #000000);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-
-@keyframes animate2 {
-    0% {
-        top: -100%;
-    }
-
-    50%,
-    100% {
-        top: 100%;
-    }
-}
-
-#botao span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #000000);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-
-@keyframes animate3 {
-    0% {
-        right: -100%;
-    }
-
-    50%,
-    100% {
-        right: 100%;
-    }
-}
-
-
-#botao span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #000000);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-
-@keyframes animate4 {
-    0% {
-        bottom: -100%;
-    }
-
-    50%,
-    100% {
-        bottom: 100%;
-    }
-}
-
-#sobre_img {
-    position: relative;
-    margin-top: 50px;
-    width: 700px;
-    height: 400px;
-    border-radius: 10px;
-}
-
-#canos {
-    position: relative;
-    width: 100%;
-    height: 520px;
-    background-image: url(imagens/pac.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#jogo_h1 {
-    position: absolute;
-    font-size: 50px;
-    margin-top: 200px;
-}
-
-#coluna_game2 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 200px;
-}
-
 
 #noticias {
     position: relative;
@@ -478,56 +494,61 @@ h1 {
 
 #n1 {
     position: relative;
-    width: 650px;
-    height: 400px;
+    width: 600px;
+    height: 350px;
     background-color: #00000038;
     float: left;
     margin: 10px;
+    margin-left: 60px;
 }
 
 #n1:hover {
     transform: scale(1.03)
 }
 
+#n2 {
+    position: relative;
+    width: 640px;
+    height: 250px;
+    background-color: #ff000038;
+    float: right;
+    margin: 10px;
+    margin-right: 60px;
+}
+
 #n2:hover {
     transform: scale(1.03)
+}
+
+
+#n3 {
+    position: relative;
+    width: 640px;
+    height: 300px;
+    background-color: #00000038;
+    float: right;
+    margin: 10px;
+    margin-right: 60px;
 }
 
 #n3:hover {
     transform: scale(1.03)
 }
 
-#n4:hover {
-    transform: scale(1.03)
-}
-
-#n2 {
-    position: relative;
-    width: 690px;
-    height: 300px;
-    background-color: #ff000038;
-    float: right;
-    margin: 10px;
-}
-
-#n3 {
-    position: relative;
-    width: 690px;
-    height: 350px;
-    background-color: #00000038;
-    float: right;
-    margin: 10px;
-}
 
 #n4 {
     position: relative;
-    width: 650px;
-    height: 250px;
+    width: 600px;
+    height: 200px;
     background-color: #ff000038;
     float: left;
     margin: 10px;
+    margin-left: 60px;
 }
 
+#n4:hover {
+    transform: scale(1.03)
+}
 
 
 
