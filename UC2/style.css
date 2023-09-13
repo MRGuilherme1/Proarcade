@@ -1,27 +1,79 @@
-:root {
-    --blue-rgb: 92 192 249;
-    --green-rgb: 125 161 35;
-    --brown-rgb: 127 46 23;
-}
-
-html,
-body {
-    background-image: url(imagens/5931481.jpg);
-    background-size: cover;
-}
-
-body {
-    min-height: 100vh;
+*{
+    margin: 0;
     padding: 0;
-    margin: 10;
-    transition: background-color 1000ms;
+}
+
+body{
+    background-image: url(imagens/5931481.jpg);
+    background-size: 100% 800px;
+    background-repeat: no-repeat;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav{
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    background-color: #e7e6e6;
+    transition: .5s;
+    margin-top: -25px;
+}
+
+.nav:hover{
+    background-color: #02e1ff;
+    color: #000000;
+    transition: .5s;
+    border-bottom: 3px solid #f702ff;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin-left: 350px;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    margin-left: 200px;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+h2,h4{
+    font-weight: normal;
+    font-family: Verdana;
+    margin-left: 200px;
+}
+
+h2{
+    font-size: 80px;
+}
+
+h4{
+    font-size: 20px;
+    margin-bottom: 400px;
 }
 
 #coluna_game1{
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.233);
 }
 
 #coluna_game2{
@@ -29,7 +81,6 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-    background-color: rgba(0, 0, 0, 0.233);
 }
 
 #game {
@@ -43,13 +94,13 @@ body {
 p{
     font-size: 15px;
     text-align: center;
-    color: aliceblue;
+    color: #3c3d3d;
     font-family: sans-serif;
 }
 
 h1{
     font-size: 30px;
-    color: aliceblue;
+    color: #3c3d3d;
     font-family: sans-serif;
 }
 
