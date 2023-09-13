@@ -442,8 +442,8 @@ h1 {
 #canos {
     position: relative;
     width: 100%;
-    height: 500px;
-    background-image: url(imagens/PACMAN.png);
+    height: 520px;
+    background-image: url(imagens/pac.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
