@@ -557,9 +557,9 @@ main {
 #form_h1 {
     margin: 0 0 20px;
     font-weight: 400;
-    color: #fa78ef;
+    color: #000000;
     text-align: center;
-    text-shadow: 1px 1px #000000ab;
+    text-shadow: 1px 1px #ffffffab;
     font-family: fonteMedia;
 }
 
@@ -570,19 +570,31 @@ n-block {
     align-items: cente;
     min-height: 0vh;
 }
+
+@keyframes forms{
+    0% {background-color: #00c5f681;}
+    20% {background-color: #ee00f681;}
+    40% {background-color: #f6002181;}
+    60% {background-color: #f65a0081;}
+    80% {background-color: #f6f20081;}
+    100% {background-color: #08f60081;}
+}
 form {
     width: 35%;
     padding: 25px;
     margin: 25px;
-    box-shadow: 0 2px 10px #f83aef; 
+    box-shadow: 0 2px 10px #000000; 
     background: #ffffffaf; 
     border-radius: 50px;
+    animation-name: forms;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
 }
 
 input, textarea{
     padding: 8px;
     margin-bottom: 20px;
-    border: 1px solid #ff00c8;
+    border: 1px solid #000000;
     border-radius: 15px;
 }
 
@@ -620,9 +632,9 @@ textarea::placeholder {
     font-family: fonteMedia;
     background: linear-gradient(45deg, transparent 5%, #f885d2a6 5%);
     border: 0;
-    color: #ff00c8;
+    color: #000000;
     letter-spacing: 3px;
-    box-shadow: 6px 0px 0px #ff00f2;
+    box-shadow: 6px 0px 0px #e05ecf;
     outline: transparent;
     position: relative;
     user-select: none;
