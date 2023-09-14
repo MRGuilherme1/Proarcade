@@ -3,13 +3,22 @@
     padding: 0;
 }
 
+@font-face{
+    font-family: fonteGrande;
+    src: url(fonts/Crang.ttf);
+}
+@font-face{
+    font-family: fonteMedia;
+    src: url(fonts/easvhs.ttf);
+}
+
 body {
     background-image: url(imagens/back02.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Verdana;
 }
-
+/*-------HEADER-------*/
 header {
     position: relative;
     width: 100%;
@@ -143,20 +152,24 @@ nav {
 
 h2,
 h4 {
-    margin-left: 200px;
+    margin-left: 150px;
     color: #fff;
+    font-weight: normal;
 }
 
 h2 {
-    font-size: 80px;
-    text-shadow: 4px 4px #00000065;
+    font-size: 70px;
+    text-shadow: 4px 4px #000000fd;
+    font-family: fonteGrande;
+    margin-bottom: 10px;
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 400px;
     font-weight: normal;
-    text-shadow: 2px 2px #00000065;
+    text-shadow: 2px 2px #000000;
+    font-family: fonteGrande;
 }
 
 #slogan {
@@ -174,7 +187,7 @@ main {
     height: auto;
 }
 
-
+/*-------PRIMEIRA LINDA DE JOGOS-------*/
 #coluna_game1 {
     position: relative;
     width: 100%;
@@ -212,7 +225,7 @@ main {
 }
 
 
-
+/*-------SOBRE NOS-------*/
 #sobre {
     width: 100%;
     height: 500px;
@@ -223,6 +236,7 @@ main {
     margin-top: 200px;
     font-size: 50px;
     color: #fff;
+    font-family: fonteGrande;
 }
 
 #sobre_p {
@@ -362,6 +376,7 @@ main {
     border-radius: 10px;
 }
 
+/*-------JOGOS-------*/
 #pac {
     position: relative;
     width: 100%;
@@ -374,6 +389,7 @@ main {
     left: 500px;
     top: 400px;
     color: #fff;
+    font-family: fonteGrande;
 }
 
 #coluna_game2 {
@@ -395,19 +411,6 @@ main {
     flex-direction: column;
     align-items: center;
     margin: auto;
-}
-
-p {
-    font-size: 15px;
-    text-align: center;
-    color: #ffffff;
-    font-family: sans-serif;
-}
-
-h1 {
-    font-size: 30px;
-    color: #ffffff;
-    font-family: sans-serif;
 }
 
 .card {
@@ -477,19 +480,20 @@ h1 {
     animation-delay: 2250ms;
 }
 
-
+/*-------NOTICIAS-------*/
 #noticias {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 700px;
     margin-top: 100px;
 }
 
 #not {
     text-align: center;
     font-size: 60px;
-    color: #000;
+    color: #ffffff;
     text-shadow: 2px 2px #00000027;
+    font-family: fonteGrande;
 }
 
 #n1 {
@@ -549,6 +553,165 @@ h1 {
 #n4:hover {
     transform: scale(1.03)
 }
+/*-------FORMULARIO-------*/
+#form_h1 {
+    margin: 0 0 20px;
+    font-weight: 400;
+    color: #fa78ef;
+    text-align: center;
+    text-shadow: 1px 1px #000000ab;
+    font-family: fonteMedia;
+}
+
+n-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: cente;
+    min-height: 0vh;
+}
+form {
+    width: 35%;
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 2px 10px #f83aef; 
+    background: #ffffffaf; 
+    border-radius: 50px;
+}
+
+input, textarea{
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ff00c8;
+    border-radius: 15px;
+}
+
+.fname {
+    width: 200px;
+}
+
+#email{
+    width: 425px;
+}
+
+#fnum, #fassun{
+    width: 200px;
+}
+
+textarea{
+    width: 425px;
+}
+
+
+input::placeholder {
+    color: #666;
+    font-family: fonteMedia;
+}
+
+textarea::placeholder {
+    color: #666;
+    font-family: fonteMedia;
+}
+.button-48,
+.button-48:after {
+    width: 435px;
+    height: 60px;
+    font-size: 20px;
+    font-family: fonteMedia;
+    background: linear-gradient(45deg, transparent 5%, #f885d2a6 5%);
+    border: 0;
+    color: #ff00c8;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #ff00f2;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-48:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'PROARCADE';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #f600e2 3%, #f600e2 5%, #a485f8a6 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #ee00f6;
+    clip-path: var(--slice-0);
+}
+
+.button-48:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
 
 
 
