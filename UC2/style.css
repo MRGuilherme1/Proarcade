@@ -17,6 +17,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+h1, h2, h3, h4{
+    font-weight: normal;
+}
 /*-------HEADER-------*/
 
 @keyframes header{
@@ -168,7 +172,6 @@ h2,
 h4 {
     margin-left: 150px;
     color: #fff;
-    font-weight: normal;
 }
 
 h2 {
@@ -181,7 +184,6 @@ h2 {
 h4 {
     font-size: 15px;
     margin-bottom: 400px;
-    font-weight: normal;
     text-shadow: 2px 2px #000000;
     font-family: fonteGrande;
 }
@@ -504,7 +506,7 @@ main {
 
 #not {
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     color: #ffffff;
     text-shadow: 2px 2px #00000027;
     font-family: fonteGrande;
@@ -597,9 +599,9 @@ main-block {
 form {
     width: 35%;
     padding: 25px;
-    margin: 25px;
+    margin: 50px;
     box-shadow: 0 2px 10px #000000; 
-    background: #ffffffaf; 
+    text-align: center;
     border-radius: 50px;
     animation-name: forms;
     animation-duration: 5s;
@@ -741,11 +743,28 @@ textarea::placeholder {
 
 #contact{
     position: relative;
-    width: 50%;
+    width: 40%;
     height: 300px;
-    background-color: #000000;
-    margin-right: 50px;
+    margin: 50px;
     float: right;
+}
+
+#contact_h1{
+    margin-top: 80px;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    font-family: fonteGrande;
+    text-shadow: 2px 2px #000;
+}
+
+#contact_h3{
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: fonteGrande;
+    text-shadow: 2px 2px #000;
 }
 
 
