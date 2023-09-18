@@ -3,31 +3,111 @@
     padding: 0;
 }
 
-@font-face{
+@font-face {
     font-family: fonteGrande;
     src: url(fonts/Crang.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: fonteMedia;
     src: url(fonts/easvhs.ttf);
+}
+
+@font-face {
+    font-family: game;
+    src: url(fonts/NiseSegaSonic.TTF);
+}
+
+@font-face {
+    font-family: tetris;
+    src: url(fonts/tetri.ttf);
+}
+
+@font-face {
+    font-family: noticias;
+    src: url(fonts/Alien-AI-Italic.ttf);
+}
+
+@font-face {
+    font-family: pacman;
+    src: url(fonts/PAC-FONT.TTF);
+}
+
+@font-face {
+    font-family: mario;
+    src: url(fonts/SuperMario256.ttf);
 }
 
 body {
     background-image: url(imagens/back02.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: Verdana;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
 /*-------HEADER-------*/
+
+@keyframes header {
+    0% {
+        background-image: url(imagens/back3.jpg);
+    }
+
+    10% {
+        background-image: url(imagens/back4.jpg);
+    }
+
+    20% {
+        background-image: url(imagens/back7.jpg);
+    }
+
+    30% {
+        background-image: url(imagens/back6.jpg);
+    }
+
+    40% {
+        background-image: url(imagens/back5.jpg);
+    }
+
+    50% {
+        background-image: url(imagens/back3.jpg);
+    }
+
+    60% {
+        background-image: url(imagens/back7.jpg);
+    }
+
+    70% {
+        background-image: url(imagens/back6.jpg);
+    }
+
+    80% {
+        background-image: url(imagens/back4.jpg);
+    }
+
+    90% {
+        background-image: url(imagens/back3.jpg);
+    }
+
+    100% {
+        background-image: url(imagens/back5.jpg);
+    }
+}
+
 header {
     position: relative;
     width: 100%;
     height: 800px;
-    background-image: url(imagens/back01.jpg);
-    background-size: 100% 700px;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
+    animation-name: header;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
 }
 
 header nav {
@@ -154,7 +234,6 @@ h2,
 h4 {
     margin-left: 150px;
     color: #fff;
-    font-weight: normal;
 }
 
 h2 {
@@ -167,7 +246,6 @@ h2 {
 h4 {
     font-size: 15px;
     margin-bottom: 400px;
-    font-weight: normal;
     text-shadow: 2px 2px #000000;
     font-family: fonteGrande;
 }
@@ -187,7 +265,7 @@ main {
     height: auto;
 }
 
-/*-------PRIMEIRA LINDA DE JOGOS-------*/
+/*-------PRIMEIRA LINHA DE JOGOS-------*/
 #coluna_game1 {
     position: relative;
     width: 100%;
@@ -490,15 +568,31 @@ main {
 
 #not {
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     color: #ffffff;
     text-shadow: 2px 2px #00000027;
     font-family: fonteGrande;
 }
+#n1 img{
+    width: 100%;
+    height: 100%;
+}
+#n2 img{
+    width: 100%;
+    height: 100%;
+}
 
+#n3 img{
+    width: 100%;
+    height: 100%;
+}
+#n4 img{
+    width: 100%;
+    height: 100%;
+}
 #n1 {
     position: relative;
-    width: 600px;
+    width: 550px;
     height: 350px;
     background-color: #00000038;
     float: left;
@@ -512,7 +606,7 @@ main {
 
 #n2 {
     position: relative;
-    width: 640px;
+    width: 600px;
     height: 250px;
     background-color: #ff000038;
     float: right;
@@ -527,7 +621,7 @@ main {
 
 #n3 {
     position: relative;
-    width: 640px;
+    width: 600px;
     height: 300px;
     background-color: #00000038;
     float: right;
@@ -542,7 +636,7 @@ main {
 
 #n4 {
     position: relative;
-    width: 600px;
+    width: 550px;
     height: 200px;
     background-color: #ff000038;
     float: left;
@@ -557,32 +651,64 @@ main {
 #form_h1 {
     margin: 0 0 20px;
     font-weight: 400;
-    color: #fa78ef;
+    color: #000000;
     text-align: center;
-    text-shadow: 1px 1px #000000ab;
+    text-shadow: 1px 1px #ffffffab;
     font-family: fonteMedia;
 }
 
-n-block {
+.main-block {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: cente;
     min-height: 0vh;
 }
+
+@keyframes forms {
+    0% {
+        background-color: #61defd59;
+    }
+
+    20% {
+        background-color: #f858fd59;
+    }
+
+    40% {
+        background-color: #ff586f59;
+    }
+
+    60% {
+        background-color: #f7925959;
+    }
+
+    80% {
+        background-color: #fffc5a59;
+    }
+
+    100% {
+        background-color: #5cfd5659;
+    }
+}
+
 form {
     width: 35%;
     padding: 25px;
-    margin: 25px;
-    box-shadow: 0 2px 10px #f83aef; 
-    background: #ffffffaf; 
+    margin: 50px;
+    box-shadow: 0 2px 10px #000000;
+    text-align: center;
     border-radius: 50px;
+    animation-name: forms;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
-input, textarea{
+input,
+textarea {
     padding: 8px;
     margin-bottom: 20px;
-    border: 1px solid #ff00c8;
+    border: 1px solid #000000;
     border-radius: 15px;
 }
 
@@ -590,15 +716,16 @@ input, textarea{
     width: 200px;
 }
 
-#email{
+#email {
     width: 425px;
 }
 
-#fnum, #fassun{
+#fnum,
+#fassun {
     width: 200px;
 }
 
-textarea{
+textarea {
     width: 425px;
 }
 
@@ -612,6 +739,7 @@ textarea::placeholder {
     color: #666;
     font-family: fonteMedia;
 }
+
 .button-48,
 .button-48:after {
     width: 435px;
@@ -620,9 +748,9 @@ textarea::placeholder {
     font-family: fonteMedia;
     background: linear-gradient(45deg, transparent 5%, #f885d2a6 5%);
     border: 0;
-    color: #ff00c8;
+    color: #000000;
     letter-spacing: 3px;
-    box-shadow: 6px 0px 0px #ff00f2;
+    box-shadow: 6px 0px 0px #e05ecf;
     outline: transparent;
     position: relative;
     user-select: none;
@@ -710,6 +838,32 @@ textarea::placeholder {
         clip-path: var(--slice-1);
         transform: translate(0);
     }
+}
+
+#contact {
+    position: relative;
+    width: 40%;
+    height: 300px;
+    margin: 50px;
+    float: right;
+}
+
+#contact_h1 {
+    margin-top: 80px;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    font-family: fonteGrande;
+    text-shadow: 2px 2px #000;
+}
+
+#contact_h3 {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: fonteGrande;
+    text-shadow: 2px 2px #000;
 }
 
 
