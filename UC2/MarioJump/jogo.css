@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+span {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+#container {
+    height: 500px;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+	background: linear-gradient(#87CEEB, #FFFFFF, #FFFFFF);
+}
+
+#container #player {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: 58px;
+    left: 20px;
+}
+
+#container #player img {
+    height: 100px;
+    width: 100px;
+}
+
+.playerActive {
+    animation: animatePlayer 0.5s linear infinite;
+}
+
+@keyframes animatePlayer {
+
+    0%,
+    100% {
+        bottom: 58px;
+    }
+
+    45%,
+    55% {
+        bottom: 190px;
+    }
+}
+
+#container #block {
+    height: 80px;
+    width: 125px;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+}
+
+#container #block img {
+    height: 80px;
+    width: 125px;
+}
+
+.blockActive {
+    animation: blockAnimate 1s linear infinite;
+}
+
+@keyframes blockAnimate {
+    0% {
+        right: -125px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+#container #road {
+    height: 30px;
+    width: 1200px;
+    position: absolute;
+    bottom: 0;
+}
+
+#container #road img {
+    height: 30px;
+    width: 2000px;
+    position: absolute;
+    left: 0;
+    animation: none;
+}
+
+@keyframes roadAnimate {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -800px;
+    }
+}
+
+#container #cloud {
+    height: 80px;
+    width: 1200px;
+    border-radius: 40px;
+    position: absolute;
+    top: 30px;
+}
+
+#container #cloud img {
+    height: 80px;
+    width: 2000px;
+    position: absolute;
+    left: -2000px;
+    animation: none;
+}
+
+@keyframes cloudAnimate {
+    0% {
+        left: -800px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+#score {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 20PX;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#gameOver {
+    display: none;
+    font-size: 70px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(50% - 40px);
+    width: 362px;
+    height: 80px;
+    color: #525252;
+	font-family: 'Press Start 2P', cursive;
+}
+
+
+@keyframes fa-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+.fa-blink {
+  -webkit-animation: fa-blink .75s linear infinite;
+  -moz-animation: fa-blink .75s linear infinite;
+  -ms-animation: fa-blink .75s linear infinite;
+  -o-animation: fa-blink .75s linear infinite;
+  animation: fa-blink .75s linear infinite;
+}

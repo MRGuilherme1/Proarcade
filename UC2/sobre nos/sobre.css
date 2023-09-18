@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: fonteGrande;
+    src: url(Crang.ttf);
+}
+
+@font-face {
+    font-family: fonteMedia;
+    src: url(Crang.ttf);
+}
+
+body {
+    width: 90%;
+    height: auto;
+    background-color: rgb(25, 15, 60);
+    background-size: contain;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 80px;
+    margin-top: 120px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav {
+    width: 60%;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button-49,
+.button-49:after {
+    width: 150px;
+    height: 60px;
+    margin: 10px;
+    left: 300px;
+    top: -100px;
+    font-size: 15px;
+    font-family: fontemedia;
+    background: linear-gradient(45deg, transparent 5%, #a485f8a6 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00e1ff;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-49:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'PROARCADE';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #f600e2 3%, #f600e2 5%, #a485f8a6 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #ee00f6;
+    clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+#primeira {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(25, 15, 60);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    ;
+}
+
+#type {
+    color: rgb(235, 226, 226);
+    text-align: left;
+    font-family: fonteGrande;
+    font-size: 60px;
+}
+
+p {
+    color: rgb(236, 236, 244);
+    font-size: 25px;
+    margin-top: 50px;
+    font-family: fontegrande
+}
+
+#pdois {
+    color: rgb(252, 246, 246);
+    font-family: Verdana;
+    font-size: 18px;
+    margin: 35px;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(25, 15, 60);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#img {
+    position: relative;
+    width: 40%;
+    height: 600px;
+    background-image: url(Sobre_Nós\ \(1\).jpg);
+    background-size: 690px;
+    background-repeat: no-repeat;
+}
+
+#texto {
+    position: relative;
+    width: 60%;
+    height: 600px;
+    background-color: rgb(25, 15, 60);
+}
+
+#text {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(26, 26, 64);
+    font-family: fonteGrande;
+}
+
+h1 {
+    color: rgb(232, 235, 238);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#colaboradores {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(20, 20, 52);
+    justify-content: space-around;
+    flex-direction: row;
+    display: flex;
+    border-radius: 0;
+}
+
+.pessoal {
+    width: 16%;
+    height: 300px;
+    background-color: rgb(22, 22, 70);
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    font-family: fonteMedia;
+    color: aliceblue;
+    border: solid 2px black;
+    margin-top: 50px;
+}
+
+.pessoal h1{ 
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+}
+
+#ghost {
+    background-image: url(21585-2-pac-man-ghost-photos.png);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+}
+
+
+@media(max-width: 800px) {
+
+
+
+    body {
+        width: 100%;
+        padding: 0%;
+    }
+
+    #primeira {
+        margin-top: 90px;
+    }
+
+    p {
+        font-size: 18px;
+
+    }
+
+    #main {
+
+        flex-direction: column;
+        width: 100%;
+        height: 1000px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #img {
+        width: 100%;
+        height: 1000px;
+        background-size: 610px;
+    }
+
+    #texto {
+        width: 100%;
+        height: 600px;
+        background-color: rgb(34, 34, 65);
+        font-size: 15px;
+
+
+    }
+
+    #pdois {
+        font-size: 15px;
+    }
+
+    #colaboradores {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pessoal {
+        width: 30%;
+        height: 290px;
+        justify-content: center;
+
+    }
+
+    #ghost {
+        background-size: contain;
+    }
+
+
+}

@@ -1,19 +1,19 @@
-// Background scrolling speed
+// Velocidade de rolagem em segundo plano
 let move_speed = 3;
 	
-// Gravity constant value
+// Valor constante da gravidade
 let gravity = 0.5;
 	
-// Getting reference to the bird element
+// Obtendo referência ao elemento pássaro
 let bird = document.querySelector('.bird');
 	
-// Getting bird element properties
+// Obtendo propriedades do elemento pássaro
 let bird_props = bird.getBoundingClientRect();
 let background =
 	document.querySelector('.background')
 			.getBoundingClientRect();
 	
-// Getting reference to the score element
+// Obtendo referência ao elemento score
 let score_val =
 	document.querySelector('.score_val');
 let message =
@@ -21,13 +21,13 @@ let message =
 let score_title =
 	document.querySelector('.score_title');
 	
-// Setting initial game state to start
+// Configurando o estado inicial do jogo para começar
 let game_state = 'Start';
 	
-// Add an eventlistener for key presses
+// Adicione um eventlistener para pressionamentos de teclas
 document.addEventListener('keydown', (e) => {
 	
-// Start the game if enter key is pressed
+// Inicie o jogo se a tecla Enter for pressionada
 if (e.key == 'Enter' &&
 	game_state != 'Play') {
 	document.querySelectorAll('.pipe_sprite')
@@ -48,19 +48,19 @@ function move() {
 	// Detect if game has ended
 	if (game_state != 'Play') return;
 	
-	// Getting reference to all the pipe elements
+	// obtendo referência a todos os elementos do tubo
 	let pipe_sprite = document.querySelectorAll('.pipe_sprite');
 	pipe_sprite.forEach((element) => {
 		
 	let pipe_sprite_props = element.getBoundingClientRect();
 	bird_props = bird.getBoundingClientRect();
 		
-	// Delete the pipes if they have moved out
-	// of the screen hence saving memory
+	// Exclua os tubos se eles tiverem saído
+//da tela, economizando memória
 	if (pipe_sprite_props.right <= 0) {
 		element.remove();
 	} else {
-		// Collision detection with bird and pipes
+		// Detecção de colisão com pássaros e canos
 		if (
 		bird_props.left < pipe_sprite_props.left +
 		pipe_sprite_props.width &&
@@ -72,15 +72,15 @@ function move() {
 		bird_props.height > pipe_sprite_props.top
 		) {
 			
-		// Change game state and end the game
-		// if collision occurs
+		//Mude o estado do jogo e termine o jogo
+		// se ocorrer colisão
 		game_state = 'End';
 		message.innerHTML = 'Press Enter To Restart';
 		message.style.left = '28vw';
 		return;
 		} else {
-		// Increase the score if player
-		// has the successfully dodged the
+		// Aumenta a pontuação se o jogador
+		// evitou com sucesso o
 		if (
 			pipe_sprite_props.right < bird_props.left &&
 			pipe_sprite_props.right +
@@ -132,20 +132,20 @@ let pipe_gap = 35;
 function create_pipe() {
 	if (game_state != 'Play') return;
 	
-	// Create another set of pipes
-	// if distance between two pipe has exceeded
-	// a predefined value
+	// Crie outro conjunto de tubos
+// se a distância entre dois tubos for excedida
+// um valor predefinido
 	if (pipe_seperation > 115) {
 	pipe_seperation = 0
 		
-	// Calculate random position of pipes on y axis
+	// Calcule a posição aleatória dos tubos no eixo y
 	let pipe_posi = Math.floor(Math.random() * 43) + 8;
 	let pipe_sprite_inv = document.createElement('div');
 	pipe_sprite_inv.className = 'pipe_sprite';
 	pipe_sprite_inv.style.top = pipe_posi - 70 + 'vh';
 	pipe_sprite_inv.style.left = '100vw';
 		
-	// Append the created pipe element in DOM
+	// Anexe o elemento pipe criado no DOM
 	document.body.appendChild(pipe_sprite_inv);
 	let pipe_sprite = document.createElement('div');
 	pipe_sprite.className = 'pipe_sprite';
@@ -153,7 +153,7 @@ function create_pipe() {
 	pipe_sprite.style.left = '100vw';
 	pipe_sprite.increase_score = '1';
 		
-	// Append the created pipe element in DOM
+	// Anexe o elemento pipe criado no DOM
 	document.body.appendChild(pipe_sprite);
 	}
 	pipe_seperation++;

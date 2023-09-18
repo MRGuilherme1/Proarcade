@@ -3,7 +3,11 @@
     padding: 0;
 }
 
-@font-face {
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face{
     font-family: fonteGrande;
     src: url(fonts/Crang.ttf);
 }
@@ -127,8 +131,8 @@ nav {
 .button-49:after {
     width: 150px;
     height: 60px;
-    font-size: 20px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    font-family: fontemedia;
     background: linear-gradient(45deg, transparent 5%, #a485f8a6 5%);
     border: 0;
     color: #fff;
@@ -228,6 +232,7 @@ nav {
     width: 150px;
     height: 150px;
     margin-left: 100px;
+    z-index: 1;
 }
 
 h2,
@@ -299,7 +304,9 @@ main {
     text-align: center;
     top: 150px;
     z-index: 3;
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+    cursor: pointer;
 }
 
 
@@ -315,6 +322,7 @@ main {
     font-size: 50px;
     color: #fff;
     font-family: fonteGrande;
+    padding: 50px;
 }
 
 #sobre_p {
@@ -329,6 +337,7 @@ main {
     padding: 25px 30px;
     margin: 40px 0;
     color: #fcfcfc;
+    font-family: fontemedia;
     background-color: #ffffff17;
     text-decoration: none;
     text-transform: uppercase;
@@ -464,20 +473,24 @@ main {
 #jogo_h1 {
     position: absolute;
     font-size: 50px;
-    left: 500px;
+    left: 400px;
     top: 400px;
     color: #fff;
     font-family: fonteGrande;
+    padding: 50px;
 }
 
 #coluna_game2 {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
+    margin-top: 100px;
 }
 
 #coluna_game3 {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     margin-top: 50px;
@@ -485,11 +498,14 @@ main {
 
 #game {
     width: 20%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
+    font-family: fontegrande;
 }
+
 
 .card {
     background-size: cover;
@@ -507,7 +523,7 @@ main {
 }
 
 .card .card-image {
-    width: clamp(250px, 20vw, 200px);
+    width: clamp(300px, 20vw, 500px);
     aspect-ratio: 2 / 3;
     border-radius: clamp(0.5rem, 0.75vw, 2rem);
 }
@@ -564,6 +580,7 @@ main {
     width: 100%;
     height: 700px;
     margin-top: 100px;
+    margin-bottom: 350px;
 }
 
 #not {
@@ -572,82 +589,62 @@ main {
     color: #ffffff;
     text-shadow: 2px 2px #00000027;
     font-family: fonteGrande;
-}
-#n1 img{
-    width: 100%;
-    height: 100%;
-}
-#n2 img{
-    width: 100%;
-    height: 100%;
+    padding: 50px;
 }
 
-#n3 img{
-    width: 100%;
-    height: 100%;
+#nots{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
 }
-#n4 img{
-    width: 100%;
-    height: 100%;
-}
-#n1 {
+
+#imagem{
     position: relative;
-    width: 550px;
-    height: 350px;
-    background-color: #00000038;
-    float: left;
-    margin: 10px;
-    margin-left: 60px;
+    width: 100%;
+    z-index: -1;
 }
 
-#n1:hover {
-    transform: scale(1.03)
-}
-
-#n2 {
+.contain{
     position: relative;
-    width: 600px;
-    height: 250px;
-    background-color: #ff000038;
-    float: right;
-    margin: 10px;
-    margin-right: 60px;
+    width: 50%;
+}
+.legenda{
+    visibility: hidden;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
 }
 
-#n2:hover {
-    transform: scale(1.03)
+.legenda a{
+    font-size: 20px;
+    color: #fff;
+    font-family: fontemedia;
+    text-decoration: none;
+    padding: 50px;
+    text-align: center;
 }
 
-
-#n3 {
-    position: relative;
-    width: 600px;
-    height: 300px;
-    background-color: #00000038;
-    float: right;
-    margin: 10px;
-    margin-right: 60px;
+.contain:hover .legenda{
+    visibility: visible;
 }
 
-#n3:hover {
-    transform: scale(1.03)
-}
-
-
-#n4 {
-    position: relative;
-    width: 550px;
-    height: 200px;
-    background-color: #ff000038;
-    float: left;
-    margin: 10px;
-    margin-left: 60px;
-}
-
-#n4:hover {
-    transform: scale(1.03)
+.contain:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 2, 2, 0)), to(rgb(24, 0, 80)));;
 }
 /*-------FORMULARIO-------*/
+
+
+main-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: cente;
+    min-height: 0vh;
+    top: 150px;
+}
+
 #form_h1 {
     margin: 0 0 20px;
     font-weight: 400;
@@ -657,7 +654,7 @@ main {
     font-family: fonteMedia;
 }
 
-.main-block {
+main-block {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -666,30 +663,13 @@ main {
     min-height: 0vh;
 }
 
-@keyframes forms {
-    0% {
-        background-color: #61defd59;
-    }
-
-    20% {
-        background-color: #f858fd59;
-    }
-
-    40% {
-        background-color: #ff586f59;
-    }
-
-    60% {
-        background-color: #f7925959;
-    }
-
-    80% {
-        background-color: #fffc5a59;
-    }
-
-    100% {
-        background-color: #5cfd5659;
-    }
+@keyframes forms{
+    0% {background-color: #61defd59;}
+    20% {background-color: #f858fd59;}
+    40% {background-color: #ff586f59;}
+    60% {background-color: #f7925959;}
+    80% {background-color: #fffc5a59;}
+    100% {background-color: #5cfd5659;}
 }
 
 form {
@@ -866,6 +846,54 @@ textarea::placeholder {
     text-shadow: 2px 2px #000;
 }
 
+footer {
+    width: 100%;
+    color: #fff;
+    background-size: cover;
+    background-color: #10003b;
+    font-size: 20px;
+}
+
+#footer_content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 2fr);
+    padding: 3rem 3rem;
+}
+
+
+.footer_list {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    gap: 0.75rem;
+    list-style: none;
+    margin-left: 20%;
+
+}
+
+.footer_list h3 {
+    color: #8a2be2;
+    font-family: fontegrande;
+}
+
+.footer_list a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.9s all;
+    font-family: fontemedia;
+}
+
+.footer_list a:hover {
+    color: #8a2be2;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #10003b;
+    font-family: fontemedia;
+}
 
 
 
